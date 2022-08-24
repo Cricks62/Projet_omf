@@ -1,0 +1,140 @@
+@import "libs/reset.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Shrikhand', 'cursive',sans-serif;
+}
+p ,a , span {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 10px 0;
+}
+.localisation {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    background-color: rgb(226, 225, 225);
+        .fa-location-dot {
+            padding-right: 15px;
+        }
+}
+.acceuil {
+    background-color: rgb(243, 243, 243);
+}
+.header_acceuil {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    p {
+        text-align: center;
+    }
+    .titre_acceuil {
+        font-weight: 900;
+        font-size: 24px;
+    }
+}
+.explorer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding:30px 0 40px 0;
+    span {
+        padding:15px;
+        border: 2px;
+        border-radius: 50px;
+        color: white;
+        background: linear-gradient(354deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        box-shadow: 0 5px 10px grey;
+    }
+}
+.fonctionnement {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .titre_fonction {
+        padding: 20px 0 20px 0;
+        font-weight: 900;
+        font-size: 24px;
+    }
+}
+.contenaire_fonction {
+    display: flex;
+    align-items: center;
+    border:  2px grey;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+    padding: 15px;
+    margin: 10px;
+    transition: background-color 0.5s linear;
+    .fonction {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #9356DC;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        height: 20px;
+        width: 20px;
+        transform: translate(-110%);
+        p {
+            font-size: 12px;
+        }
+    }
+    .logo_fonction {
+        display: flex;
+        color: gray;
+        padding: 5px;
+        transform: translate(-15px);
+    }
+    span {
+        font-weight: bold;
+        font-size: 14px;
+    }
+}
+.contenaire_fonction:hover {
+    background-color: #F5EDFF;
+    .logo_fonction {
+        color: #9356DC;
+    }
+}
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+    padding: 20px;
+    .titre_restaurants {
+        padding: 20px 0 20px 0;
+        font-weight: 900;
+        font-size: 24px;
+    }
+}
+.card_restaut {
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--color-ombre);
+    flex-grow: 1;
+    height: 200px;
+    .photo_restaut {
+        width: 100%;
+        height: 75%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        -webkit-border-top-left-radius: 30px;
+        -webkit-border-top-right-radius: 30px;
+        -moz-border-radius-topleft: 30px;
+        -moz-border-radius-topright: 30px;
+        display: block;
+        object-fit: cover;
+    }
+}
