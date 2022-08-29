@@ -44,16 +44,22 @@ td, th {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Shrikhand", "cursive", sans-serif;
+  font-family: Shrikhand, "cursive", sans-serif;
 }
 
-p, a, span {
-  font-family: "Roboto", sans-serif;
+a, li, p, span {
+  font-family: Roboto, sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 10px;
 }
 
 .logo {
@@ -102,7 +108,7 @@ a {
   border-radius: 50px;
   color: white;
   background: linear-gradient(354deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  box-shadow: 0 5px 10px grey;
+  box-shadow: 0 5px 10px rgb(185, 185, 185);
 }
 
 .fonctionnement {
@@ -125,6 +131,7 @@ a {
   padding: 15px;
   margin: 10px;
   transition: background-color 0.5s linear;
+  box-shadow: 0 5px 10px rgb(185, 185, 185);
 }
 .contenaire_fonction .fonction {
   display: flex;
@@ -151,7 +158,6 @@ a {
   font-weight: bold;
   font-size: 14px;
 }
-
 .contenaire_fonction:hover {
   background-color: #F5EDFF;
 }
@@ -164,6 +170,7 @@ a {
   flex-direction: column;
   background-color: rgb(243, 243, 243);
   padding: 20px;
+  gap: 20px;
 }
 .restaurants .titre_restaurants {
   padding: 20px 0 20px 0;
@@ -172,24 +179,71 @@ a {
 }
 
 .card_restaut {
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: white;
   cursor: pointer;
   box-shadow: 0 0 15px var(--color-ombre);
   flex-grow: 1;
-  height: 200px;
+  height: 250px;
+  position: relative;
 }
 .card_restaut .photo_restaut {
   width: 100%;
   height: 75%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  -webkit-border-top-left-radius: 30px;
-  -webkit-border-top-right-radius: 30px;
-  -moz-border-radius-topleft: 30px;
-  -moz-border-radius-topright: 30px;
+  -webkit-border-radius: 15px;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius: 15px;
+  -moz-border-radius-bottomright: 0;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
   display: block;
   object-fit: cover;
+}
+.card_restaut .nouveau {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #99E2D0;
+  padding: 6px 15px;
+  color: #226151;
+  font-weight: bold;
+}
+
+.footer_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.footer_card .titre_card {
+  font-weight: bold;
+}
+.footer_card .fa-heart:hover {
+  color: #9356DC;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+}
+footer h2 {
+  padding: 20px;
+}
+footer ul {
+  padding-bottom: 30px;
+}
+footer ul li {
+  padding: 0 20px;
+  gap: 10px;
+}
+footer ul li .fa-solid {
+  padding-right: 10px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
