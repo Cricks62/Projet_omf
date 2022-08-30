@@ -1,0 +1,101 @@
+@import "libs/reset.scss";
+
+.logo {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    img {
+        padding-left: 40px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        cursor: pointer;
+    }    
+}
+.header_menu {
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 20px;
+    background-color: rgb(243, 243, 243);
+}
+.menu {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+    .categorie_menu {
+        padding-bottom: 10px;
+        span {
+            border-bottom: 3px solid #99E2D0;
+        }
+    }
+    .card_menu {
+        display: flex;
+        padding: 5px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        background-color: white;
+        margin-bottom: 10px;
+        align-items: flex-end;
+        justify-content: space-between;
+        .plat {
+            font-weight: bold;
+        }
+        .accompagnement {
+            font-size: 14px;
+        }
+        .prix {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    
+}
+.commander {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding:30px 0 40px 0;
+    span {
+        padding:10px 40px;
+        border: 2px;
+        border-radius: 50px;
+        color: white;
+        background: linear-gradient(354deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        box-shadow: 0 5px 10px rgb(185, 185, 185);
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    color: white;
+    h2 {
+        padding: 20px;
+    }
+    ul {
+        padding-bottom: 30px;
+        li {
+            padding: 0 20px;
+            gap: 10px;
+            .fa-solid {
+                padding-right: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}

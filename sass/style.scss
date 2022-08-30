@@ -1,17 +1,5 @@
 @import "libs/reset.scss";
 
-// h1, h2, h3, h4, h5, h6 {
-//     font-family: 'Shrikhand', 'cursive',sans-serif;
-// }
-// p ,a , span, li {
-//     font-family: 'Roboto', sans-serif;
-// }
-// a {
-//     text-decoration: none;
-//     color: black;
-// }
-
-
 .logo {
     display: flex;
     justify-content: center;
@@ -133,12 +121,12 @@
     .photo_restaut {
         width: 100%;
         height: 75%;
-        -webkit-border-radius: 15px;
-        -webkit-border-bottom-right-radius: 0;
-        -moz-border-radius: 15px;
-        -moz-border-radius-bottomright: 0;
-        border-radius: 15px;
-        border-bottom-right-radius: 0;
+        -webkit-border-top-left-radius: 15px;
+        -webkit-border-top-right-radius: 15px;
+        -moz-border-radius-topleft: 15px;
+        -moz-border-radius-topright: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         display: block;
         object-fit: cover;
     }
@@ -154,12 +142,19 @@
 }
 .footer_card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-content: flex-start;
+    flex-direction: column;
     padding: 10px 15px;
     .titre_card {
         font-weight: bold;
     }
+}
+.fa-heart {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 15px;
+    top: 210px;
     .fa-heart:hover {
         color: #9356DC;
     }
