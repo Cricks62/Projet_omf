@@ -4,12 +4,14 @@
     display: flex;
     justify-content: center;
     padding: 15px 0 10px 0;
+
 }
 .localisation {
     display: flex;
     padding: 15px;
     justify-content: center;
     background-color: rgb(226, 225, 225);
+    box-shadow: inset 10px 34px 4px -27px rgba(0,0,0,0.16);
         .fa-location-dot {
             padding-right: 15px;
         }
