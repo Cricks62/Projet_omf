@@ -47,15 +47,18 @@
         margin-bottom: 10px;
         align-items: flex-end;
         justify-content: space-between;
+        box-shadow: 0 5px 10px rgb(185, 185, 185);
         .plat {
             font-weight: bold;
+            font-size: 14px;
         }
         .accompagnement {
-            font-size: 14px;
+            font-size: 12px;
         }
         .prix {
             font-weight: bold;
-            font-size: 14px;
+            font-size: 12px;
+            padding-right: 5px;
         }
     }
     
