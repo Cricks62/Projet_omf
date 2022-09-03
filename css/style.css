@@ -179,7 +179,12 @@ a {
   font-size: 24px;
 }
 
-.card_restaut {
+.contenaire_restau {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contenaire_restau .card_restau {
   border-radius: 15px;
   background-color: white;
   cursor: pointer;
@@ -188,7 +193,7 @@ a {
   height: 250px;
   position: relative;
 }
-.card_restaut .photo_restaut {
+.contenaire_restau .card_restau .photo_restaut {
   width: 100%;
   height: 75%;
   -webkit-border-top-left-radius: 15px;
@@ -200,7 +205,7 @@ a {
   display: block;
   object-fit: cover;
 }
-.card_restaut .nouveau {
+.contenaire_restau .card_restau .nouveau {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -253,6 +258,47 @@ footer ul li .fa-solid {
 footer ul li a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 481px) {
+  .fonctionnement .titre_fonction {
+    display: flex;
+    justify-content: center;
+  }
+  .fonctionnement .contenaire {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .restaurants .titre_restaurants {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .contenaire_restau {
+    flex-direction: unset;
+  }
+  .contenaire_restau .card_restau {
+    height: 400px;
+    width: 350px;
+  }
+  .contenaire_restau .card_restau .footer_card {
+    padding: 35px 20px;
+  }
+  .contenaire_restau .card_restau .fa-heart {
+    top: 345px;
+  }
+  .contenaire_fonction {
+    height: 90px;
+    width: 300px;
+    justify-content: center;
+  }
+  .contenaire_fonction .fonction {
+    transform: translate(-250%);
+  }
+  .contenaire_fonction span {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
