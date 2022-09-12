@@ -45,6 +45,9 @@
         background: linear-gradient(354deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
         box-shadow: 0 5px 10px rgb(185, 185, 185);
     }
+    &:hover {
+        opacity: 0.7;
+    }
 }
 .fonctionnement {
     padding: 20px;
@@ -62,10 +65,11 @@
     border:  2px grey;
     border-radius: 15px;
     background-color: rgb(243, 243, 243);
-    padding: 15px;
+    padding: 15px 30px;
     margin: 10px;
     transition: background-color 0.5s linear;
     box-shadow: 0 5px 10px rgb(185, 185, 185);
+    position: relative;
     .fonction {
         display: flex;
         align-items: center;
@@ -76,7 +80,8 @@
         border-radius: 20px;
         height: 20px;
         width: 20px;
-        transform: translate(-110%);
+        position: absolute;
+        left: -10px;
         p {
             font-size: 12px;
         }
@@ -84,12 +89,11 @@
     .logo_fonction {
         display: flex;
         color: gray;
-        padding: 5px;
-        transform: translate(-15px);
     }
     span {
         font-weight: bold;
         font-size: 14px;
+        padding: 0 15px;
     }
     &:hover {
         background-color: #F5EDFF;
@@ -206,6 +210,15 @@ footer {
             justify-content: center;
         }
     }
+    footer {
+        h2 {
+            text-align: center;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
 }
 @media screen and (min-width: 1025px) {
     .contenaire_restau {
@@ -225,11 +238,17 @@ footer {
         height: 90px;
         width: 300px;
         justify-content: center;
-        .fonction {
-            transform: translate(-250%);
-        }
         span {
             font-size: 16px;
+        }
+    }
+    footer {
+        h2 {
+            text-align: center;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
         }
     }
 }

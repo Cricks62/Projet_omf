@@ -1,81 +1,90 @@
 @import "libs/reset.scss";
-
-.logo {
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-    img {
-        padding-left: 40px;
-    }
-    a {
-        display: flex;
-        align-items: center;
-        padding-left: 10px;
-        cursor: pointer;
-    }    
+body {
+    background-color: rgb(243, 243, 243);
 }
-.header_menu {
+header {
+    background-color: white;
+    .logo {
+        img {
+            padding-left: 40px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            cursor: pointer;
+        }    
+    }
+}
+section {
+    position: relative;
+    top: -25px;
+    background-color: rgb(243, 243, 243);
     -webkit-border-top-left-radius: 20px;
     -webkit-border-top-right-radius: 20px;
     -moz-border-radius-topleft: 20px;
     -moz-border-radius-topright: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    padding: 20px;
-    background-color: rgb(243, 243, 243);
-}
-.menu {
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
-    background-color: rgb(243, 243, 243);
-    .categorie_menu {
-        padding-bottom: 10px;
-        span {
-            border-bottom: 3px solid #99E2D0;
-        }
-    }
-    .card_menu {
+    .header_menu {
         display: flex;
-        padding: 5px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-        background-color: white;
-        margin-bottom: 10px;
-        align-items: flex-end;
         justify-content: space-between;
-        box-shadow: 0 5px 10px rgb(185, 185, 185);
-        .plat {
-            font-weight: bold;
-            font-size: 14px;
+        font-size: 18px;
+        padding: 20px;
+    }
+    .menu {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+
+        .categorie_menu {
+            padding-bottom: 10px;
+            span {
+                border-bottom: 3px solid #99E2D0;
+            }
         }
-        .accompagnement {
-            font-size: 12px;
-        }
-        .prix {
-            font-weight: bold;
-            font-size: 12px;
-            padding-right: 5px;
+        .card_menu {
+            display: flex;
+            padding: 5px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+            align-items: flex-end;
+            justify-content: space-between;
+            box-shadow: 0 5px 10px rgb(185, 185, 185);
+            .plat {
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .accompagnement {
+                font-size: 12px;
+            }
+            .prix {
+                font-weight: bold;
+                font-size: 12px;
+                padding-right: 5px;
+            }
         }
     }
-    
-}
-.commander {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding:30px 0 40px 0;
-    span {
-        padding:10px 40px;
-        border: 2px;
-        border-radius: 50px;
-        color: white;
-        background: linear-gradient(354deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-        box-shadow: 0 5px 10px rgb(185, 185, 185);
+    .commander {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding:30px 0 40px 0;
+        span {
+            padding:10px 40px;
+            border: 2px;
+            border-radius: 50px;
+            color: white;
+            background: linear-gradient(354deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+            box-shadow: 0 5px 10px rgb(185, 185, 185);
+        }
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }
 
@@ -99,6 +108,36 @@ footer {
                 text-decoration: none;
                 color: white;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {    
+    .img_header {
+        img {
+            height: 500px;
+            width: 100%;
+            flex-grow: 1;
+        }
+    }
+    section {
+        top: -40px;
+        .menu {
+            flex-direction: row;
+            justify-content: space-around;
+            .card_menu {
+                margin-bottom: 20px;
+                width: 350px;
+            }
+        }
+    }
+    footer {
+        h2 {
+            text-align: center;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
         }
     }
 }

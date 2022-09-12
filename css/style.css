@@ -111,6 +111,9 @@ a {
   background: linear-gradient(354deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 0 5px 10px rgb(185, 185, 185);
 }
+.explorer:hover {
+  opacity: 0.7;
+}
 
 .fonctionnement {
   padding: 20px;
@@ -129,10 +132,11 @@ a {
   border: 2px grey;
   border-radius: 15px;
   background-color: rgb(243, 243, 243);
-  padding: 15px;
+  padding: 15px 30px;
   margin: 10px;
   transition: background-color 0.5s linear;
   box-shadow: 0 5px 10px rgb(185, 185, 185);
+  position: relative;
 }
 .contenaire_fonction .fonction {
   display: flex;
@@ -144,7 +148,8 @@ a {
   border-radius: 20px;
   height: 20px;
   width: 20px;
-  transform: translate(-110%);
+  position: absolute;
+  left: -10px;
 }
 .contenaire_fonction .fonction p {
   font-size: 12px;
@@ -152,12 +157,11 @@ a {
 .contenaire_fonction .logo_fonction {
   display: flex;
   color: gray;
-  padding: 5px;
-  transform: translate(-15px);
 }
 .contenaire_fonction span {
   font-weight: bold;
   font-size: 14px;
+  padding: 0 15px;
 }
 .contenaire_fonction:hover {
   background-color: #F5EDFF;
@@ -273,6 +277,13 @@ footer ul li a {
     display: flex;
     justify-content: center;
   }
+  footer h2 {
+    text-align: center;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 @media screen and (min-width: 1025px) {
   .contenaire_restau {
@@ -293,11 +304,15 @@ footer ul li a {
     width: 300px;
     justify-content: center;
   }
-  .contenaire_fonction .fonction {
-    transform: translate(-250%);
-  }
   .contenaire_fonction span {
     font-size: 16px;
+  }
+  footer h2 {
+    text-align: center;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
