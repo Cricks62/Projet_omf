@@ -97,10 +97,9 @@ a {
 }
 
 .explorer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
+  width: 210px;
   padding: 30px 0 40px 0;
 }
 .explorer span {
@@ -111,8 +110,8 @@ a {
   background: linear-gradient(354deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 0 5px 10px rgb(185, 185, 185);
 }
-.explorer:hover {
-  opacity: 0.7;
+.explorer span:hover {
+  background: linear-gradient(354deg, rgb(158, 106, 221) 0%, rgb(255, 145, 224) 100%);
 }
 
 .fonctionnement {
@@ -182,6 +181,10 @@ a {
   font-weight: 900;
   font-size: 24px;
 }
+.restaurants .titre_restaurants h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
 
 .contenaire_restau {
   display: flex;
@@ -246,8 +249,11 @@ footer {
   background-color: #353535;
   color: white;
 }
-footer h2 {
+footer a {
+  color: white;
   padding: 20px;
+  text-align: center;
+  font-family: Shrikhand, "cursive", sans-serif;
 }
 footer ul {
   padding-bottom: 30px;

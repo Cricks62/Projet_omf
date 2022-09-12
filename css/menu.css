@@ -69,17 +69,17 @@ body {
 header {
   background-color: white;
 }
-header .logo img {
-  padding-left: 40px;
+header .logo {
+  position: relative;
 }
 header .logo a {
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
   cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 20px;
 }
 
-section {
+main {
   position: relative;
   top: -25px;
   background-color: rgb(243, 243, 243);
@@ -90,24 +90,24 @@ section {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-section .header_menu {
+main .header_menu {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
   padding: 20px;
 }
-section .menu {
+main .menu {
   display: flex;
   padding: 20px;
   flex-direction: column;
 }
-section .menu .categorie_menu {
+main .menu .categorie_menu {
   padding-bottom: 10px;
 }
-section .menu .categorie_menu span {
+main .menu .categorie_menu span {
   border-bottom: 3px solid #99E2D0;
 }
-section .menu .card_menu {
+main .menu .card_menu {
   display: flex;
   padding: 5px;
   -webkit-border-radius: 10px;
@@ -119,26 +119,25 @@ section .menu .card_menu {
   justify-content: space-between;
   box-shadow: 0 5px 10px rgb(185, 185, 185);
 }
-section .menu .card_menu .plat {
+main .menu .card_menu .plat {
   font-weight: bold;
   font-size: 14px;
 }
-section .menu .card_menu .accompagnement {
+main .menu .card_menu .accompagnement {
   font-size: 12px;
 }
-section .menu .card_menu .prix {
+main .menu .card_menu .prix {
   font-weight: bold;
   font-size: 12px;
   padding-right: 5px;
 }
-section .commander {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+main .commander {
+  display: block;
+  margin: 0 auto;
+  width: 210px;
   padding: 30px 0 40px 0;
 }
-section .commander span {
+main .commander span {
   padding: 10px 40px;
   border: 2px;
   border-radius: 50px;
@@ -146,8 +145,8 @@ section .commander span {
   background: linear-gradient(354deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 0 5px 10px rgb(185, 185, 185);
 }
-section .commander:hover {
-  opacity: 0.7;
+main .commander span:hover {
+  background: linear-gradient(354deg, rgb(158, 106, 221) 0%, rgb(255, 145, 224) 100%);
 }
 
 footer {
@@ -156,8 +155,11 @@ footer {
   background-color: #353535;
   color: white;
 }
-footer h2 {
+footer a {
+  color: white;
   padding: 20px;
+  text-align: center;
+  font-family: Shrikhand, "cursive", sans-serif;
 }
 footer ul {
   padding-bottom: 30px;
@@ -176,9 +178,10 @@ footer ul li a {
 
 @media screen and (min-width: 1025px) {
   .img_header img {
-    height: 500px;
+    max-height: 500px;
+    max-width: 100%;
+    object-fit: cover;
     width: 100%;
-    flex-grow: 1;
   }
   section {
     top: -40px;
