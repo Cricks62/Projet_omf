@@ -6,12 +6,12 @@ header {
     background-color: white;
     .logo {
         position: relative;
-        a {
+        .back {
             cursor: pointer;
             position: absolute;
             left: 10px;
             top: 20px;
-        }    
+        }  
     }
 }
 main {
@@ -29,6 +29,22 @@ main {
         justify-content: space-between;
         font-size: 18px;
         padding: 20px;
+        .fa-regular {
+            position: absolute;
+            right: 20px;
+        }
+        .fa-solid {
+            color: transparent;
+            background-image: linear-gradient(354deg, rgb(158, 106, 221) 0%, rgb(255, 145, 224) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 200ms;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.15);
+            }
+        }
     }
     .menu {
         display: flex;
@@ -42,6 +58,11 @@ main {
             }
         }
         .card_menu {
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 100ms * $i;
+                }
+            }
             display: flex;
             padding: 5px;
             -webkit-border-radius: 10px;
@@ -52,6 +73,8 @@ main {
             align-items: flex-end;
             justify-content: space-between;
             box-shadow: 0 5px 10px rgb(185, 185, 185);
+            animation: apparition 1s;
+            animation-fill-mode: both;
             .plat {
                 font-weight: bold;
                 font-size: 14px;
@@ -66,11 +89,22 @@ main {
             }
         }
     }
+    @keyframes apparition {
+        0% {
+            transform: translateY(50%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
     .commander {
         display: block;
         margin: 0 auto;
         width: 210px;
         padding:30px 0 40px 0;
+        text-align: center;
         span {
             padding:10px 40px;
             border: 2px;
@@ -95,7 +129,6 @@ footer {
     a {
         color: white;
         padding: 20px;
-        text-align: center;
         font-family: Shrikhand, "cursive", sans-serif;
     }
         ul {
@@ -109,11 +142,23 @@ footer {
                 a {
                     text-decoration: none;
                     color: white;
+                    font-family: "Roboto",sans-serif;
+                    padding: 0;
                 }
             }
         }
 }
-
+@media screen and (min-width: 481px) {
+    footer {
+        a {
+            text-align: center;
+        }
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
 @media screen and (min-width: 1025px) {    
     .img_header {
         img {
@@ -123,7 +168,7 @@ footer {
             width: 100%;
         }
     }
-    section {
+    main {
         top: -40px;
         .menu {
             flex-direction: row;
@@ -135,7 +180,7 @@ footer {
         }
     }
     footer {
-        h2 {
+        a {
             text-align: center;
         }
         ul {

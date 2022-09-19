@@ -247,7 +247,6 @@ footer {
     a {
         color: white;
         padding: 20px;
-        text-align: center;
         font-family: Shrikhand, "cursive", sans-serif;
     }
     ul {
@@ -261,15 +260,14 @@ footer {
             a {
                 text-decoration: none;
                 color: white;
+                font-family: "Roboto",sans-serif;
+                padding: 0;
             }
         }
     }
 }
 
 @media screen and (min-width: 481px) {
-    // .loader {
-    //     margin-left: 43%;
-    // }
     .fonctionnement {
         .titre_fonction {
             display: flex;
@@ -287,7 +285,7 @@ footer {
         }
     }
     footer {
-        h2 {
+        a {
             text-align: center;
         }
         ul {
@@ -297,9 +295,6 @@ footer {
     }
 }
 @media screen and (min-width: 1025px) {
-    // .loader {
-    //     margin-left: 47%;
-    // }
     .contenaire_restau {
         flex-direction: unset;
         .card_restau {
@@ -322,7 +317,7 @@ footer {
         }
     }
     footer {
-        h2 {
+        a {
             text-align: center;
         }
         ul {
