@@ -64,17 +64,19 @@ main {
                 }
             }
             display: flex;
-            padding: 5px;
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
             background-color: white;
             margin-bottom: 10px;
             align-items: flex-end;
-            justify-content: space-between;
             box-shadow: 0 5px 10px rgb(185, 185, 185);
             animation: apparition 1s;
             animation-fill-mode: both;
+            overflow: hidden;
+            .description {
+                padding: 5px;
+            }
             .plat {
                 font-weight: bold;
                 font-size: 14px;
@@ -83,10 +85,39 @@ main {
                 font-size: 12px;
             }
             .prix {
+                display: flex;
+                align-items: flex-end;
+                padding: 5px;
+                margin-left: auto;
+                p {
                 font-weight: bold;
                 font-size: 12px;
                 padding-right: 5px;
+                }
             }
+            .checkbox {
+                background-color: #99E2D0;
+                padding: 12px;
+                margin-right: -40px;
+                transition: margin-right 0.5s;
+                i {
+                    color: white;
+                }
+            }
+            &:hover .checkbox {
+                margin-right: 0;
+            }
+            &:hover i {
+                animation: spin 0.5s linear;
+            }  
+        }
+    }
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg) ;
+        }
+        100% {
+            transform: rotate(360deg);
         }
     }
     @keyframes apparition {

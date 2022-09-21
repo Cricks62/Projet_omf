@@ -125,17 +125,16 @@ main .menu .categorie_menu span {
 }
 main .menu .card_menu {
   display: flex;
-  padding: 5px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   background-color: white;
   margin-bottom: 10px;
   align-items: flex-end;
-  justify-content: space-between;
   box-shadow: 0 5px 10px rgb(185, 185, 185);
   animation: apparition 1s;
   animation-fill-mode: both;
+  overflow: hidden;
 }
 main .menu .card_menu:nth-child(1) {
   animation-delay: 100ms;
@@ -149,6 +148,9 @@ main .menu .card_menu:nth-child(3) {
 main .menu .card_menu:nth-child(4) {
   animation-delay: 400ms;
 }
+main .menu .card_menu .description {
+  padding: 5px;
+}
 main .menu .card_menu .plat {
   font-weight: bold;
   font-size: 14px;
@@ -157,9 +159,38 @@ main .menu .card_menu .accompagnement {
   font-size: 12px;
 }
 main .menu .card_menu .prix {
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+  margin-left: auto;
+}
+main .menu .card_menu .prix p {
   font-weight: bold;
   font-size: 12px;
   padding-right: 5px;
+}
+main .menu .card_menu .checkbox {
+  background-color: #99E2D0;
+  padding: 12px;
+  margin-right: -40px;
+  transition: margin-right 0.5s;
+}
+main .menu .card_menu .checkbox i {
+  color: white;
+}
+main .menu .card_menu:hover .checkbox {
+  margin-right: 0;
+}
+main .menu .card_menu:hover i {
+  animation: spin 0.5s linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @keyframes apparition {
   0% {
