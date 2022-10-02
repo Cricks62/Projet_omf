@@ -335,7 +335,7 @@ footer ul li a {
   padding: 0;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 667px) {
   .fonctionnement .titre_fonction {
     display: flex;
     justify-content: center;

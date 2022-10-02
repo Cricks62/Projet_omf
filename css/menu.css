@@ -150,13 +150,21 @@ main .menu .card_menu:nth-child(4) {
 }
 main .menu .card_menu .description {
   padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .menu .card_menu .plat {
   font-weight: bold;
   font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 main .menu .card_menu .accompagnement {
   font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 main .menu .card_menu .prix {
   display: flex;
@@ -250,7 +258,7 @@ footer ul li a {
   padding: 0;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 667px) {
   footer a {
     text-align: center;
   }

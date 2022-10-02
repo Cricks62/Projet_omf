@@ -76,13 +76,21 @@ main {
             overflow: hidden;
             .description {
                 padding: 5px;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             .plat {
                 font-weight: bold;
                 font-size: 14px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             .accompagnement {
                 font-size: 12px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             .prix {
                 display: flex;
@@ -179,7 +187,7 @@ footer {
             }
         }
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 667px) {
     footer {
         a {
             text-align: center;
